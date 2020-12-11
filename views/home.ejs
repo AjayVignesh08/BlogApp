@@ -1,0 +1,10 @@
+<%- include("partials/header.ejs") -%>
+
+<h1>Home</h1>
+<p><%= homecontent %> </p>
+<%  posts.forEach(function(element){ %>
+ <h1><%= element.Title %> </h1>
+ <p><%= element.content.slice(0,100) + " ..." %>
+
+   <a href="/posts/<%=element.Title %>">Read More</a> </p>
+<% }) %>
